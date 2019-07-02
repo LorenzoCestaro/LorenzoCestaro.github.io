@@ -31,7 +31,7 @@
   <link rel="shortcut icon" href="https://lorenzocestaro.com/favicon.ico">
 
 
-  <link rel="stylesheet" href="https://lorenzocestaro.com/css/style.min.67f1c9b551d450ed7532dea33f94a8cce18aea84ecadff747d963a4a836f6a92.css" integrity="sha256-Z/HJtVHUUO11Mt6jP5SozOGK6oTsrf90fZY6SoNvapI=">
+  <link rel="stylesheet" href="https://lorenzocestaro.com/css/style.min.4f8754460e248378ad6626fd9e78910e2176965ede6ede220548f5b99ff3a62a.css" integrity="sha256-T4dURg4kg3itZib9nniRDiF2ll7ebt4iBUj1uZ/zpio=">
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
   
@@ -39,6 +39,25 @@
   
 
   
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#efefef",
+      "text": "#3a3a3a",
+    },
+  },
+  "position": "top",
+  "content": {
+    "message": "This website uses cookies to make your browsing experience better.",
+  }
+})});
+</script>
+
 </head>
 
 <body id="page">
@@ -79,11 +98,12 @@
 
   
 <script type="application/javascript">
-var doNotTrack = false;
+var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+var doNotTrack = (dnt == "1" || dnt == "yes");
 if (!doNotTrack) {
 	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
 	ga('create', 'UA-140467136-1', 'auto');
-	
+	ga('set', 'anonymizeIp', true);
 	ga('send', 'pageview');
 }
 </script>
